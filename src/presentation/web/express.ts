@@ -14,7 +14,7 @@ app.use(helmet())
 app.use(cors({ origin: "*" }))
 app.use(router)
 
-const PORT = 4578
+const PORT = 3000
 app.get("/", (req: Request, res: Response) => res.json("Servidor funcionando normalmente") )
 app.listen(PORT, () => {
     console.log(`Server running in port ${PORT}`)

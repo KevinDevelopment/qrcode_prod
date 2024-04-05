@@ -7,7 +7,8 @@
     "test": "vitest",
     "dev": "ts-node-dev --respawn --watch --transpile-only src/presentation/web/express.ts",
     "start": "node dist/src/presentation/web/express.js",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",

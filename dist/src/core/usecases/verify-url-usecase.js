@@ -9,17 +9,9 @@ class VerifyUrlUseCase {
         this.urlPort = urlPort;
     }
     async perform(input) {
-        try {
-            const url = new url_1.UrlToBeChecked(new url_2.URL(input.url));
-            const verifyUrl = await this.urlPort.verifyUrl(url.url.value);
-            return verifyUrl;
-        }
-        catch (error) {
-            if (error instanceof Error) {
-                throw new Error(error.message);
-            }
-            throw new Error("Erro interno do servidor");
-        }
+        const url = new url_1.UrlToBeChecked(new url_2.URL(input.url));
+        const verifyUrl = await this.urlPort.verifyUrl(url.url.value);
+        return verifyUrl;
     }
 }
 exports.VerifyUrlUseCase = VerifyUrlUseCase;

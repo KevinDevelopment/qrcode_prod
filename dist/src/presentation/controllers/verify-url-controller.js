@@ -14,7 +14,7 @@ class VerifyUrlController {
                 url: req.body.url
             };
             const urlData = await this.verifyUseCase.perform(inputDTO);
-            return res.status(200).json({ message: "ok", data: [urlData] });
+            return res.status(200).json({ message: "ok", data: urlData.data });
         }
         catch (error) {
             console.log(error);
